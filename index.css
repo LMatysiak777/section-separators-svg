@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: "Inconsolata", monospace;
+  font-size: 200%;
+  color: white;
+  background: darkslategrey;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vh;
+}
+
+.dark-font {
+  color: #000;
+}
+
+.blue {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.pink {
+  background: pink;
+  opacity: 1;
+}
+
+.dark {
+  background: darkslategrey;
+}
+
+.green {
+  background: green;
+}
+
+.blue2 {
+  background: #0066ff;
+}
+
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: darkslategrey;
+  transform: translate(85%, 60%);
+}
+
+.curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: blue;
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
+
+.bubble::after {
+  content: "";
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  height: 85%;
+  width: 100%;
+  background-color: darkgoldenrod;
+  z-index: -1;
+}
+
+.custom1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom1 svg {
+  position: relative;
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 225px;
+}
+
+.custom1 .shape-fill {
+  fill: #9117ff;
+}
+
+.custom2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom2 svg {
+  position: relative;
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 117px;
+  transform: rotateY(180deg);
+}
+
+.custom2.shape-fill {
+  fill: #000000;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("/layer1.svg");
+}
+
+.layer2 {
+  background-image: url("/layer2.svg");
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  z-index: 0;
+}
